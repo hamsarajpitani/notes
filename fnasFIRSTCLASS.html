@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        function as first class citizens
+    </h1>
+    
+    <img src="images/firstclass3.png" alt="">
+    <img src="images/firstclass2.png" alt="">
+    <img src="images/firstclass1.png" alt="">
+  
+</body>
+<script>
+
+    //ASSIGNING FUNCTION TO VARIBALE
+
+    const varfunction = function () {
+        alert("i am a variable assigned power function");
+    }
+
+    // varfunction();
+
+    //PASSING FUNCTION AS A ARGUMNET 
+
+    const argument = function (fun1) {
+        
+        console.log(fun1());
+    }
+
+    argument(varfunction)
+
+    //FUNCTION RETURNING
+
+    function a() {
+        return function b() {
+            console.log("hii there");
+        }
+    }
+
+    //CAN BE CALLED AS
+
+    // a()();
+    
+    // const c = a();
+    // c();
+
+</script>
+</html>

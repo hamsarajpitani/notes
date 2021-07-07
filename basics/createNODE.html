@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <p>this is my first para using html</p>
+
+     <script>
+           //ACCESING CHILD OF BODY
+           console.log(document.body.children);
+
+
+         var element= document.createElement("p");
+         var elementdata = document.createTextNode("this is my second para using javascript");
+         element.appendChild(elementdata);
+
+         console.log(element);
+         document.body.appendChild(element);
+
+       var BOOM = document.createElement("h1");
+       var data= document.createTextNode("BOOM USING JS CREATED & ADDED(APPENDED) TO BODY");
+       BOOM.appendChild(data);
+
+       document.body.appendChild(BOOM);
+     </script>
+</body>
+</html>

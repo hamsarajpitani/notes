@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="images/apply.png" alt="">
+</body>
+<script>
+     const object1 = {
+        name : "raj",
+        content : "js",
+        feature : function (parameter,parameter2) {
+            console.log(`name is ${this.name} and content is ${this.content}
+            called with using object ${parameter}`);
+        }
+    }
+
+  object1.feature("1","secondparamter");
+
+  const object2 ={
+      name : "samsung",
+      content : "mobile"
+  }
+
+ //IF OBJECT2 WANT TO USE OBJECT1 FEATURE() THEN
+  //1.kiska use + . function name . call()
+
+  object1.feature.call(object2,"2","2paramter")
+
+  //USING APPLY METHOD
+
+  object1.feature.call(object2,["2","2paramter"]);
+
+  const max = Math.max(1,2,3,4,5);
+  console.log(max);
+
+  //max dont take aregumet parameteras array
+  //we can make it using apply
+
+  const max1 = Math.max.apply(null,[10,20,40,50]);
+  console.log("max using apply",max1);
+
+</script>
+</html>

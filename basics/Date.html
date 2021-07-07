@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var date= new Date();
+        document.write(date);
+        
+        var month= date.getMonth() +1;
+
+        document.write("<br>"+"\""+ date.getDate()+
+        "/"+
+        month +"/"+date.getFullYear()+"\"");
+
+        var hour = date.getHours();
+        var min = date.getMinutes();
+        var sec= date.getSeconds();
+
+        document.write("<br>"+
+        hour+":"+min+":"+sec)
+    </script>
+</body>
+</html>

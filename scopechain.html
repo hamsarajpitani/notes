@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCOPEchain</title>
+</head>
+<body>
+    <h1>every function gets it own execution context</h1>
+    <h2>lexically down to top phele inner function parent ko pucheyga for variable and then global stack if not gets varibale he wants</h2>
+
+    <h1>every function have its own scope for function three to work we need too pass arguments</h1>
+
+    <img src="images/scope1.png" alt="">
+    <img src="images/scope2.png" alt="">
+    <img src="images/scope3.png" alt="">
+    <img src="images/scope4.png" alt="">
+</body>
+<script>
+    
+    var a = "hii from a global";
+    
+    first();
+
+    function first() {
+        
+        var b = "hii from parent";
+        //importnat to call else nothing gonna happen
+        second();
+
+        function second() {
+            var c="hiii from inside";
+
+            console.log(a+b+c+"\n");
+
+            three();
+        }
+
+    }
+
+    function three() {  
+        console.log("hii function  THREE HERE");
+        console.log("from function three",a+b+c);
+    }
+
+</script>
+</html>

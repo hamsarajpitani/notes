@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closure</title>
+</head>
+<body>
+    <p>outter fn call kr a stack se nikal k baad b hum inner function or use kr k a & b value use kr rahe a</p>
+    <p>which was some where in memory even after execution of outer(5) completed</p>
+    <p>this called clousre</p>
+    <p>baley e outer function nahi a to b inner k le a outer fn varibale / globAL B AVAILABLE </p>
+    <img src="images/closure2.png" alt="">
+    <img src="images/closure1.png" alt="">
+</body>
+<script>
+
+    // STATEmenT 1 LEXICAL SCOPE .function outter(a) {
+        
+    //     let b = 10;
+    //     const inner  = ()=>{
+    //         console.log(a+b);
+    //     }
+
+    //     inner();
+    // }
+
+    // outter(5);
+
+    //STAMENET TWO
+    function outter(a) {
+        
+        let b = 10;
+        const inner  = ()=>{
+            console.log(a+b);
+        }
+
+        return inner;
+    }
+
+    //THIS IS CLOSURE OUTTER CALLED AND GONE FROM STACK
+    const inner = outter(5);
+    console.dir(inner)
+    //STILL AFTER THAT USING LIVE()
+    // WE ARE ASSEING ALL VARIABLES OF OUTTER FN AND MAKING WORK FOR US & EXECUTING 
+    //THE INNER () FUNCTION
+    inner();
+
+    
+</script>
+</html>

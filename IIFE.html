@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIFE</title>
+</head>
+<body>
+    <h1>use when data ekdam private rakna a</h1>
+    <h2>call function independently without need of other</h2>
+    <img src="images/IIFE.png" alt="">
+</body>
+
+ <script>
+     // () grouping operator iss k andar 
+
+     ( function () {
+         var name = "raja";
+         console.log("the name is "+name);
+     })();//to call ()
+
+     console.log(name);//UNACCESABLE
+
+     ( function (name) {
+        //  var name = "raja";
+         console.log("the name is "+name);
+     })("raja");//to call ()
+
+ </script>
+</html>

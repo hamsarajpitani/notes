@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call(0</title>
+</head>
+<body>
+    <img src="images/call.png" alt="">
+</body>
+<script>
+
+    const object1 = {
+        name : "raj",
+        content : "js",
+        feature : function (parameter,parameter2) {
+            console.log(`name is ${this.name} and content is ${this.content}
+            called with using object ${parameter}`);
+        }
+    }
+
+  object1.feature("1","secondparamter");
+
+  const object2 ={
+      name : "samsung",
+      content : "mobile"
+  }
+
+ //IF OBJECT2 WANT TO USE OBJECT1 FEATURE() THEN
+  //1.kiska use + . function name . call()
+
+  object1.feature.call(object2,"2","2paramter")
+</script>
+</html>

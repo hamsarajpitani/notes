@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="clock"></p><br>
+    <button onclick="clearInterval(clock)">clickme</button>
+
+    <button onclick="clearTimeout(timeout)">stop showing 3sec alert</button>
+    <script>
+       
+        var timeout = setTimeout(fun2,3000);
+         
+        function fun2() {
+            alert("showing after 3 seconds");
+        }
+
+        function myfun() {
+            
+            var date = new Date();
+            var time = date.toLocaleTimeString();
+            //document.write(time);
+            document.getElementById("clock").innerHTML=time;
+        }
+
+        var clock = setInterval(myfun,1000);
+        </script>
+</body>
+</html>

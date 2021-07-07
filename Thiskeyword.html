@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>if in a  object we have created method/function</h1>
+    <h1>this keyword inside it refers to owner/object in which it defined </h1>
+    <img src="images/this1.png" alt="">
+    <img src="images/this2.png" alt="">
+    <img src="images/this3.png" alt="">
+    <img src="images/thiss1.png" alt="">
+    <img src="images/thiss2.png" alt="">
+    
+</body>
+<script>
+
+    //GLOBAL
+    console.log("GLOBAL\n"+this);
+
+    function fun(a,b) {
+        var add = a+b;
+        console.log(add);
+        console.log("INSIDE FUNCTION"+this);
+    }
+
+    fun(5,5);
+
+    const raja = {
+        name : "king",
+        age : 25,
+        sum : function (){
+            console.log(this.name);
+            console.log(this);
+
+            //REUGLAR FUNCTION ALWAYS REFERS TO GLOBAL OBJECT WINDOW    
+
+            function child(){
+                console.log(this);
+                //OUTPUT->  WINDOW OBJ
+            }
+
+            child();
+        }
+    }
+
+    raja.sum();
+</script>
+</html>

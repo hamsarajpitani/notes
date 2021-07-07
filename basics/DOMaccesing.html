@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="1">phele</p>
+    <p class="2">dusara</p>
+    <p class="two"> thisra</p>
+    <p class="two">chowta</p>
+
+     <!--remove space between ul & li to get first child as li not *text beacuse space is consider as text-->
+    <ul><li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+    <script type="text/javascript">
+           var iddata  = document.getElementById("1");
+           console.log(iddata);
+           
+           var classdata= document.getElementsByClassName("2")[0];
+           classdata.innerHTML="second";
+
+           <!---to get first element access use query selector-->
+           var qs = document.querySelector('p').innerHTML;
+           console.log(qs);        
+           
+           var  list = document.querySelector('ul');
+           console.log(list.firstChild,list.lastChild);
+    </script>
+</body>
+</html>

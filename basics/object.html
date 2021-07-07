@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("<h1>object name : value inside curly braces</h1>");
+
+        var raja = {
+            fullname : "hamsaraj",
+            surname : "pitani",
+            age : 25
+        }
+        console.log(`name is ${raja.fullname} age is ${raja.age} `);
+
+        //change property
+
+        raja.age = 27;
+
+        //add property
+        raja.middlename= "mahesh" ;
+
+        //delete property name
+        delete raja.age;
+    </script>
+</body>
+</html>

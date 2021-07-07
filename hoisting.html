@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hoisting</title>
+</head>
+<body>
+    <h1>LEARN
+    hoisting
+    creation phase
+    execution phase</h1>
+    <br>
+    <p>execution contention has two phase ccreation phase and exceution phase</p>
+    <p>first phase in creating phase is hoisting</p>
+    <p>extra argument object is creation when argument is passed</p>
+    <img src="images/img1.png" alt="">
+    <img src="images/img2.png" alt="">
+    <img src="images/img3.png" alt="">
+    <img src="images/img4.png" alt="">
+    <img src="images/img5.png" alt="">
+    <img src="images/img6.png" alt="">
+    <img src="images/img7.png" alt="">
+    <img src="images/img8.png" alt="">
+    <img src="images/img9.png" alt="">
+</body>
+    <script>
+
+        var job = "webdevloper";
+        console.log(job);
+
+        function fun(){
+            //hoisting seen new var 
+            // var job = undefined
+            console.log("what is your job\n"+job);
+            //var job="newreactdev";
+            var job="newreactdev";
+            console.log("new job is"+job);
+        }
+        fun();
+    </script>
+</html>

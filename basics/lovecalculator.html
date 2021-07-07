@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="first" id="name1">
+    <label for="first"></label>
+
+    <input type="text" name="second" id="name2">
+    <label for="second"></label>
+     <br>
+    <button onclick="Calculate()">click me</button>
+    <br>
+    <input type="text" id="result" placeholder="result">
+    
+</body>
+<script>
+//     Math.random()
+// 0.795831964992276
+//     * 100 to get 0 to 99 ;
+//     Math.floor()
+   
+
+    function Calculate () {
+        
+          var data = document.getElementById("name1").value;
+          alert(data);
+           
+          if(data= !isNaN){
+              alert("it is not a number")
+          }
+
+          var result = Math.floor(Math.random() * 100);
+          document.getElementById("result").value  = result + "%";
+    }
+</script>
+</html>

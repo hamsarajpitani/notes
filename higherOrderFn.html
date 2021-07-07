@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HigherOrderFn</title>
+</head>
+<body>
+    <h1>calling can be done in a()() or c = a() ; c()</h1>
+    <img src="images/HOF.png" alt="">
+</body>
+<script>
+
+    const interview = (name)=>{
+
+        if(name === "raja"){
+            return function (topic) {
+                console.log(`hii ${name} what is ${topic} means ?`);
+                
+            }
+        }
+
+        if(name === "hams"){
+            return function (topic) {
+                console.log(`hii ${name} what is ${topic} means ?`);
+            }
+        }
+
+        if(name === "hamsraj"){
+            return function (topic) {
+                console.log(`hii ${name} what is ${topic} means ?`);
+            }
+        }
+    }
+
+  //calling
+
+  interview("raja")("UI");
+  interview("hams")("css");
+  interview("hamsraj")("Html");
+
+  //calling way 2
+
+  const canditate  = interview("raja")
+  canditate("UI");
+  canditate("CSS");
+  canditate("HTML");
+
+</script>
+</html>
